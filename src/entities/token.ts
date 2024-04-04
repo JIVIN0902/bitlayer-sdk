@@ -1,5 +1,11 @@
 import invariant from 'tiny-invariant'
-import { ChainId } from '../constants'
+import {
+  ChainId,
+  NATIVE_DECIMALS,
+  WRAPPED_NATIVE_ADDRESS,
+  WRAPPED_NATIVE_NAME,
+  WRAPPED_NATIVE_SYMBOl
+} from '../constants'
 import { validateAndParseAddress } from '../utils'
 import { Currency } from './currency'
 
@@ -59,9 +65,9 @@ export function currencyEquals(currencyA: Currency, currencyB: Currency): boolea
 export const WETH = {
   [ChainId.MAINNET]: new Token(
     ChainId.MAINNET,
-    '0xEb54dACB4C2ccb64F8074eceEa33b5eBb38E5387',
-    18,
-    'WDEGEN',
-    'Wrapped DEGEN'
+    WRAPPED_NATIVE_ADDRESS,
+    NATIVE_DECIMALS,
+    WRAPPED_NATIVE_SYMBOl,
+    WRAPPED_NATIVE_NAME
   )
 }

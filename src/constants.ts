@@ -2,6 +2,13 @@ import JSBI from 'jsbi'
 
 // exports for external consumption
 export type BigintIsh = JSBI | bigint | string
+export const NATIVE_SYMBOl = 'DEGEN'
+export const NATIVE_NAME = 'DEGEN'
+export const WRAPPED_NATIVE_SYMBOl = 'WDEGEN'
+export const WRAPPED_NATIVE_NAME = 'WRAPPED DEGEN'
+export const NATIVE_DECIMALS = 18
+// export const WRAPPED_NATIVE_ADDRESS = '0x3e57d6946f893314324C975AA9CEBBdF3232967E'
+export const WRAPPED_NATIVE_ADDRESS = '0xEb54dACB4C2ccb64F8074eceEa33b5eBb38E5387'
 
 export enum ChainId {
   MAINNET = 666666666
