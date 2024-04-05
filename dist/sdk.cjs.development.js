@@ -18,9 +18,15 @@ var providers = require('@ethersproject/providers');
 var IUniswapV2Pair = _interopDefault(require('@uniswap/v2-core/build/IUniswapV2Pair.json'));
 
 var _SOLIDITY_TYPE_MAXIMA;
+var NATIVE_SYMBOl = 'BTC';
+var NATIVE_NAME = 'Bitcoin';
+var WRAPPED_NATIVE_SYMBOl = 'WBTC';
+var WRAPPED_NATIVE_NAME = 'WRAPPED BITCOIN';
+var NATIVE_DECIMALS = 18;
+var WRAPPED_NATIVE_ADDRESS = '0x3e57d6946f893314324C975AA9CEBBdF3232967E'; // export const WRAPPED_NATIVE_ADDRESS = '0xEb54dACB4C2ccb64F8074eceEa33b5eBb38E5387'
 
 (function (ChainId) {
-  ChainId[ChainId["MAINNET"] = 666666666] = "MAINNET";
+  ChainId[ChainId["MAINNET"] = 200810] = "MAINNET";
 })(exports.ChainId || (exports.ChainId = {}));
 
 (function (TradeType) {
@@ -34,7 +40,7 @@ var _SOLIDITY_TYPE_MAXIMA;
   Rounding[Rounding["ROUND_UP"] = 2] = "ROUND_UP";
 })(exports.Rounding || (exports.Rounding = {}));
 
-var FACTORY_ADDRESS = '0x6357A422607783a39F64D3c063011d231B04d890';
+var FACTORY_ADDRESS = '0xdD830B03ac7909ca739EC20b2D07BAa6e214031c';
 var INIT_CODE_HASH = '0x01429e880a7972ebfbba904a5bbe32a816e78273e4b38ffa6bdeaebce8adba7c';
 var MINIMUM_LIQUIDITY = /*#__PURE__*/JSBI.BigInt(1); // exports for internal consumption
 
@@ -368,7 +374,7 @@ function Currency(decimals, symbol, name) {
  * The only instance of the base class `Currency`.
  */
 
-Currency.ETHER = /*#__PURE__*/new Currency(18, 'DEGEN', 'DEGEN');
+Currency.ETHER = /*#__PURE__*/new Currency(NATIVE_DECIMALS, NATIVE_SYMBOl, NATIVE_NAME);
 var ETHER = Currency.ETHER;
 
 var _WETH;
@@ -434,7 +440,7 @@ function currencyEquals(currencyA, currencyB) {
     return currencyA === currencyB;
   }
 }
-var WETH = (_WETH = {}, _WETH[exports.ChainId.MAINNET] = /*#__PURE__*/new Token(exports.ChainId.MAINNET, '0xEb54dACB4C2ccb64F8074eceEa33b5eBb38E5387', 18, 'WDEGEN', 'Wrapped DEGEN'), _WETH);
+var WETH = (_WETH = {}, _WETH[exports.ChainId.MAINNET] = /*#__PURE__*/new Token(exports.ChainId.MAINNET, WRAPPED_NATIVE_ADDRESS, NATIVE_DECIMALS, WRAPPED_NATIVE_SYMBOl, WRAPPED_NATIVE_NAME), _WETH);
 
 var _toSignificantRoundin, _toFixedRounding;
 var Decimal = /*#__PURE__*/toFormat(_Decimal);

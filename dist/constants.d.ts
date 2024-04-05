@@ -1,7 +1,13 @@
 import JSBI from 'jsbi';
 export declare type BigintIsh = JSBI | bigint | string;
+export declare const NATIVE_SYMBOl = "BTC";
+export declare const NATIVE_NAME = "Bitcoin";
+export declare const WRAPPED_NATIVE_SYMBOl = "WBTC";
+export declare const WRAPPED_NATIVE_NAME = "WRAPPED BITCOIN";
+export declare const NATIVE_DECIMALS = 18;
+export declare const WRAPPED_NATIVE_ADDRESS = "0x3e57d6946f893314324C975AA9CEBBdF3232967E";
 export declare enum ChainId {
-    MAINNET = 666666666
+    MAINNET = 200810
 }
 export declare enum TradeType {
     EXACT_INPUT = 0,
@@ -12,7 +18,7 @@ export declare enum Rounding {
     ROUND_HALF_UP = 1,
     ROUND_UP = 2
 }
-export declare const FACTORY_ADDRESS = "0x6357A422607783a39F64D3c063011d231B04d890";
+export declare const FACTORY_ADDRESS = "0xdD830B03ac7909ca739EC20b2D07BAa6e214031c";
 export declare const INIT_CODE_HASH = "0x01429e880a7972ebfbba904a5bbe32a816e78273e4b38ffa6bdeaebce8adba7c";
 export declare const MINIMUM_LIQUIDITY: JSBI;
 export declare const ZERO: JSBI;
