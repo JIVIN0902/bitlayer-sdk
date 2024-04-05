@@ -2,16 +2,16 @@ import JSBI from 'jsbi'
 
 // exports for external consumption
 export type BigintIsh = JSBI | bigint | string
-export const NATIVE_SYMBOl = 'DEGEN'
-export const NATIVE_NAME = 'DEGEN'
-export const WRAPPED_NATIVE_SYMBOl = 'WDEGEN'
-export const WRAPPED_NATIVE_NAME = 'WRAPPED DEGEN'
+export const NATIVE_SYMBOl = 'BTC'
+export const NATIVE_NAME = 'Bitcoin'
+export const WRAPPED_NATIVE_SYMBOl = 'WBTC'
+export const WRAPPED_NATIVE_NAME = 'WRAPPED BITCOIN'
 export const NATIVE_DECIMALS = 18
-// export const WRAPPED_NATIVE_ADDRESS = '0x3e57d6946f893314324C975AA9CEBBdF3232967E'
-export const WRAPPED_NATIVE_ADDRESS = '0xEb54dACB4C2ccb64F8074eceEa33b5eBb38E5387'
+export const WRAPPED_NATIVE_ADDRESS = '0x3e57d6946f893314324C975AA9CEBBdF3232967E'
+// export const WRAPPED_NATIVE_ADDRESS = '0xEb54dACB4C2ccb64F8074eceEa33b5eBb38E5387'
 
 export enum ChainId {
-  MAINNET = 666666666
+  MAINNET = 200810
 }
 
 export enum TradeType {
@@ -25,7 +25,7 @@ export enum Rounding {
   ROUND_UP
 }
 
-export const FACTORY_ADDRESS = '0x6357A422607783a39F64D3c063011d231B04d890'
+export const FACTORY_ADDRESS = '0xdD830B03ac7909ca739EC20b2D07BAa6e214031c'
 
 export const INIT_CODE_HASH = '0x01429e880a7972ebfbba904a5bbe32a816e78273e4b38ffa6bdeaebce8adba7c'
 
